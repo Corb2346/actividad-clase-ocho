@@ -12,7 +12,7 @@ export class UnoComponent implements OnInit {
 
   public username: string ='';
   public password: string ='';
-
+  
   constructor( private ApiserviceService: ApiserviceService,private router:Router) { }
 
   ngOnInit(): void {

@@ -1,9 +1,23 @@
-<form action="">
-    <label>Username</label>
-    <input type="text" [(ngModel)]="username" name="username" placeholder="User Name"> 
-    <br>
-    <label>Password</label>
-    <input type="text" [(ngModel)]="password" name="password" placeholder="Password">
-    <br>
-    <button (click)="onClick()">Login</button>
-</form>
+
+        
+    <div class="form-container">
+
+        <div class="child-container"> 
+         <mat-form-field class="example-form-field" appearance="fill">
+         <mat-label>Username</mat-label>
+         
+         <input matInput type="text" [(ngModel)]="username" name="username" placeholder="User Name"> 
+         </mat-form-field>
+         <br>
+         <br>
+         <mat-form-field class="example-form-field" appearance="fill">
+           <mat-label>Password</mat-label>
+           
+           <input  matInput type="text" [(ngModel)]="password" name="password" placeholder="Password">
+
+         </mat-form-field>
+         <br><br>
+
+         <button mat-button class="loginBtn" (click)="onClick()"> Log in</button>
+        </div>
+    </div>
