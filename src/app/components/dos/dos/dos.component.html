@@ -1,10 +1,13 @@
 
 <input type="text" name="characterName" [(ngModel)]="characterName" (input)="onChange()">
 
-<div *ngIf="character$ | async as personaje">
-   <div> aca va info</div>
-    <p>{{ personaje | json}}</p>
-    <p>{{ personaje.results.name}}</p>
-<!--<p> {{pokemon.name}}</p>
-<img [src]="pokemon.sprites.front_default" alt="">-->
+<div *ngIf="character$ | async as personajeTraido">
+   <!--<div> aca va info</div>
+    <p>{{ personajeTraido | json}}</p> -->
+
+    <ng-container *ngFor="let personaje of personajeTraido.results"> 
+        <img [src]="personaje.image" alt="">
+    </ng-container>
+    
+
 </div>

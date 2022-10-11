@@ -17,7 +17,6 @@ export class DosComponent implements OnInit {
     this.character$ = this.ApiserviceService.searchCharacter(this.characterName).pipe(
      /* map((resp:any) => {
         console.log("trae characters",resp);
-        
       })*/
       tap(console.log)
     )
