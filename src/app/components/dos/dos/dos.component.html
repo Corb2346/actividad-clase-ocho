@@ -2,7 +2,7 @@
 <input type="text" name="characterName" [(ngModel)]="characterName" (input)="onChange()">
 
 <div *ngIf="character$ | async as personaje">
-   
+   <div> aca va info</div>
     <p>{{ personaje | json}}</p>
     <p>{{ personaje.results.name}}</p>
 <!--<p> {{pokemon.name}}</p>
