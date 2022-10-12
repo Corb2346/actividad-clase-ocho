@@ -1,12 +1,14 @@
+    <div class="input-container">
+        <label class="characterLabel" >Character Finder : </label><br><br>
+        <label class="characterLabel"> Names suggested : Rick morty beth birdperson summer </label>
+        <br><br>
+        <input class="characterFinder" type="text" name="characterName" [(ngModel)]="characterName" (input)="onChange()" placeholder="insert character name">
+    </div>
 
-<input type="text" name="characterName" [(ngModel)]="characterName" (input)="onChange()">
-
-<div *ngIf="character$ | async as personajeTraido">
-   <!--<div> aca va info</div>
-    <p>{{ personajeTraido | json}}</p> -->
-
+    <br><br><br>
+    <div *ngIf="character$ | async as personajeTraido">
     <ng-container *ngFor="let personaje of personajeTraido.results"> 
         <img [src]="personaje.image" alt="">
     </ng-container>
-    
-</div>
+            
+
